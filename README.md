@@ -2,25 +2,24 @@
 
 ## yunikorn 部分
 ### online 安裝: ###
+```shell
 helm install yunikorn yunikorn/yunikorn -n yunikorn --version 1.5.1 --set embedAdmissionController=false --set enableSchedulerPlugin=true 
-
+```
 ### air-gap 安裝: ###
+```shell
 helm install yunikorn yunikorn-1.5.1.tgz -n yunikorn --set embedAdmissionController=false --set enableSchedulerPlugin=true
+```
 
 #### 項目repo: ####
 <https://github.com/apache/yunikorn-core>
 
 ## Spark-Operator 部分
 ### online 安裝: ###
-<div>
-  <pre>
-    <code>
-      # Your Linux command here
-      echo "Hello, World!"
-    </code>
-  </pre>
-  <button onclick="copyToClipboard('echo \"Hello, World!\"')">Copy</button>
-</div>
+```shell
+helm install spark-operator spark-operator/spark-operator \
+    --namespace spark-operator \
+    --set webhook.enable=true
+```
 
 ### air-gap 安裝: ###
 
