@@ -42,6 +42,13 @@ helm install spark-operator spark-operator/spark-operator \
 ### air-gap 安裝: ###
 ## 準備 image: ##
 ```shell
+docker pull apache/yunikorn:scheduler-1.5.1
+docker pull apache/yunikorn:scheduler-plugin-1.5.1
+docker pull apache/yunikorn:admission-1.5.1
+docker pull apache/yunikorn:web-1.5.1
+```
+
+```shell
 helm install spark-operator spark-operator-1.4.3.tgz \
     --namespace spark-operator \
     --set podMonitor.enable=true \
