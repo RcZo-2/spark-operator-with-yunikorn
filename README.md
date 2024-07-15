@@ -19,6 +19,7 @@ docker pull apache/yunikorn:scheduler-plugin-1.5.1
 docker pull apache/yunikorn:admission-1.5.1
 docker pull apache/yunikorn:web-1.5.1
 ```
+#### 安裝: ####
 ```shell
 helm install yunikorn yunikorn-1.5.1.tgz -n yunikorn --set embedAdmissionController=false --set enableSchedulerPlugin=true
 ```
@@ -50,12 +51,9 @@ helm install spark-operator spark-operator/spark-operator \
 ### air-gap 安裝: ###
 #### 準備 image: ####
 ```shell
-docker pull apache/yunikorn:scheduler-1.5.1
-docker pull apache/yunikorn:scheduler-plugin-1.5.1
-docker pull apache/yunikorn:admission-1.5.1
-docker pull apache/yunikorn:web-1.5.1
+docker pull kubeflow/spark-operator:v1beta2-1.6.1-3.5.0
 ```
-
+#### 安裝: ####
 ```shell
 helm install spark-operator spark-operator-1.4.3.tgz \
     --namespace spark-operator \
