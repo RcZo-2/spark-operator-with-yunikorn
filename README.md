@@ -17,7 +17,7 @@ helm install yunikorn yunikorn-1.5.1.tgz -n yunikorn --set embedAdmissionControl
 
 ## Spark-Operator 部分
 ### 準備 namespace ###
-有 gatekeeper 的話可以隔離 spark-run-namespace-1 到指定節點，沒有的話後續限制在yunikorn 的config 也可以
+有 gatekeeper 的話可以隔離 spark-run-namespace-1 到指定節點，沒有的話後續在 yunikorn 的 config 再做限制也可以
 ### online 安裝: ###
 ```shell
 helm install spark-operator spark-operator/spark-operator \
