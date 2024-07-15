@@ -1,6 +1,6 @@
 # spark-operator-with-yunikorn
 
-## yunikorn 部分
+## 🦄 yunikorn 部分
 ### 準備 namespace: ###
 ```shell
 kubectl create namespace yunikorn
@@ -28,7 +28,7 @@ helm install yunikorn yunikorn-1.5.1.tgz -n yunikorn --set embedAdmissionControl
 <https://github.com/apache/yunikorn-core>
 
 
-## Spark-Operator 部分
+## ✨ Spark-Operator 部分
 ### 準備 namespace ###
 有 gatekeeper 的話可以隔離 spark-run-namespace-1 到指定節點，沒有的話後續在 yunikorn 的 config 再做限制也可以
 ### 準備 namespace: ###
