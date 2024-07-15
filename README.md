@@ -8,7 +8,11 @@ kubectl create namespace yunikorn
 
 ### online 安裝: ###
 ```shell
-helm install yunikorn yunikorn/yunikorn -n yunikorn --version 1.5.1 --set embedAdmissionController=false --set enableSchedulerPlugin=true 
+helm install yunikorn yunikorn/yunikorn \
+    --namespace yunikorn \
+    --version 1.5.1 \
+    --set embedAdmissionController=false \
+    --set enableSchedulerPlugin=true
 ```
 
 ### air-gap 安裝: ###
@@ -21,7 +25,10 @@ docker pull apache/yunikorn:web-1.5.1
 ```
 #### 安裝: ####
 ```shell
-helm install yunikorn yunikorn-1.5.1.tgz -n yunikorn --set embedAdmissionController=false --set enableSchedulerPlugin=true
+helm install yunikorn yunikorn-1.5.1.tgz \
+    --namespace yunikorn \
+    --set embedAdmissionController=false \
+    --set enableSchedulerPlugin=true
 ```
 
 #### 項目repo: ####
