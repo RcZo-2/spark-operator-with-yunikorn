@@ -12,13 +12,20 @@ helm install yunikorn yunikorn/yunikorn -n yunikorn --version 1.5.1 --set embedA
 ```
 
 ### air-gap 安裝: ###
-## 準備 image: ##
+#### 準備 image: ####
+```shell
+docker pull apache/yunikorn:scheduler-1.5.1
+docker pull apache/yunikorn:scheduler-plugin-1.5.1
+docker pull apache/yunikorn:admission-1.5.1
+docker pull apache/yunikorn:web-1.5.1
+```
 ```shell
 helm install yunikorn yunikorn-1.5.1.tgz -n yunikorn --set embedAdmissionController=false --set enableSchedulerPlugin=true
 ```
 
 #### 項目repo: ####
 <https://github.com/apache/yunikorn-core>
+
 
 ## Spark-Operator 部分
 ### 準備 namespace ###
@@ -30,6 +37,7 @@ kubectl create namespace spark-run-namespace-1
 ```
 
 ### online 安裝: ###
+
 ```shell
 helm install spark-operator spark-operator/spark-operator \
     --namespace spark-operator \
@@ -40,7 +48,7 @@ helm install spark-operator spark-operator/spark-operator \
 ```
 
 ### air-gap 安裝: ###
-## 準備 image: ##
+#### 準備 image: ####
 ```shell
 docker pull apache/yunikorn:scheduler-1.5.1
 docker pull apache/yunikorn:scheduler-plugin-1.5.1
