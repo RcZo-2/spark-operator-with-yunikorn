@@ -7,9 +7,11 @@ helm install yunikorn yunikorn/yunikorn -n yunikorn --version 1.5.1 --set embedA
 ### air-gap 安裝: ###
 helm install yunikorn yunikorn-1.5.1.tgz -n yunikorn --set embedAdmissionController=false --set enableSchedulerPlugin=true
 
-項目repo <http://markdown.tw/](https://github.com/apache/yunikorn-core>
+### 項目repo: ### <http://markdown.tw/](https://github.com/apache/yunikorn-core>
 
 ## Spark-Operator 部分
 ### online 安裝: ###
 
 ### air-gap 安裝: ###
+
+### 項目repo: ### <https://github.com/kubeflow/spark-operator/tree/v1beta2-1.6.1-3.5.0>
