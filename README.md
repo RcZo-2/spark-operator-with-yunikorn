@@ -12,6 +12,15 @@ helm install yunikorn yunikorn-1.5.1.tgz -n yunikorn --set embedAdmissionControl
 
 ## Spark-Operator 部分
 ### online 安裝: ###
+<div>
+  <pre>
+    <code>
+      # Your Linux command here
+      echo "Hello, World!"
+    </code>
+  </pre>
+  <button onclick="copyToClipboard('echo \"Hello, World!\"')">Copy</button>
+</div>
 
 ### air-gap 安裝: ###
 
