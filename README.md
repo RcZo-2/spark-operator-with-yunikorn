@@ -51,7 +51,7 @@ helm install spark-operator spark-operator/spark-operator \
     --namespace spark-operator \
     --set podMonitor.enable=true \
     --set serviceAccounts.spark.name="spark-submit-sa" \
-    --set sparkJobNamespaces=["spark-run-namespace-1"]\
+    --set sparkJobNamespaces=["spark-run-namespace-1"] \
     --set webhook.enable=true
 ```
 
@@ -66,7 +66,7 @@ helm install spark-operator spark-operator-1.4.3.tgz \
     --namespace spark-operator \
     --set podMonitor.enable=true \
     --set serviceAccounts.spark.name="spark-submit-sa" \
-    --set sparkJobNamespaces=["spark-run-namespace-1"]\
+    --set sparkJobNamespaces=["spark-run-namespace-1"] \
     --set webhook.enable=true
 ```
 #### 項目repo: #### 
